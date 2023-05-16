@@ -11,6 +11,7 @@ const NavBar = ({ user, handleLogout }) => {
 
           <main className={`${styles.container}`}>
           <div className={`${styles.everythingbutlogout}`}>
+              <span className={`${styles.navlinks}`}><NavLink to="/"><img src="src/assets/images/bitebuddyicon.png" width='32'/></NavLink></span>
               <span className={`${styles.navlinks}`}><NavLink to="/profiles"><img src="src/assets/images/profilesicon.png" width='32'/></NavLink></span>
               <span className={`${styles.navlinks}`}><NavLink to="/recipes"><img src="src/assets/images/recipesicon.png" width='32'/></NavLink></span>
               <span className={`${styles.navlinks}`}><NavLink to="/boards"><img src="src/assets/images/boardsicon.png" width='32'/></NavLink></span>
