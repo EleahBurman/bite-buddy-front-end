@@ -9,10 +9,14 @@ import styles from './ProfileCard.module.css'
 
 const ProfileCard = ({ profile }) => {
   const photo = profile.photo ? profile.photo : tacoman
+  const cardStyle = {
+    width: '400px',
+    height: '400px',
+  }
   if (profile.image) {
     return (
-      <Link to={`/profiles/${profile._id}`} >
-        <main className={`${styles.profilecardcontainer}`}>
+      <Link to={`/profiles/${profile._id}`}>
+        <main className={`${styles.profilecardcontainer}`} style={cardStyle}>
           <div className={`${styles.profileimage}`}>
           <img style={{width: '200px', height: '200px'}} src={photo} alt="Profile Photo" />
           </div>
@@ -24,7 +28,7 @@ const ProfileCard = ({ profile }) => {
   } else {
     return (
       <Link to={`/profiles/${profile._id}`} >
-        <main className={`${styles.profilecardcontainer}`}>
+        <main className={`${styles.profilecardcontainer}`} style={cardStyle}>
           <div className={`${styles.noprofileimage}`}>
           <img style={{width: '200px', height: '200px'}} src={photo} alt="Taco Man" />
           </div>
