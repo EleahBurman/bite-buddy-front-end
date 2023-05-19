@@ -53,12 +53,14 @@ const BoardList = () => {
               :
               <Link to={`/boards/${board._id}`} key={board._id}>
                 <div className={`${board.bgColor}`}>
-                  <div className={`${styles.link}`} >
-                    {board.title}
+                  <div className={`${styles.columnboardlist}`}>
+                    <div className={`${styles.link}`} >
+                      {board.title}
+                    </div>
                   </div>
-                  <div className={`${styles.tacocat}`} >
-                    <img src={tacocat} width='80' alt='tacocat' />
-                  </div>
+                    <div className={`${styles.tacocat}`} >
+                      <img src={tacocat} width='80' alt='tacocat' />
+                    </div>
                 </div>
               </Link>
             )
